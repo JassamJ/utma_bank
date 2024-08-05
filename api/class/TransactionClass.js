@@ -30,7 +30,7 @@ class ManagerTransaction{
 
     async getTransaction(id){
         try{
-        const transaccion = await transactionModel.findById(id);
+        const transaction = await transactionModel.findById(id);
         return transaction;
     }catch (error){
         throw new Error(`Error al obtener la transaccion: ${error}`);
@@ -39,7 +39,7 @@ class ManagerTransaction{
 
     async getTransactions(){
         try{
-        const transaccions = await transactionModel.findById(id);
+        const transactions = await transactionModel.findById(id);
         return transactions;
     }catch (error){
         throw new Error(`Error al obtener la transaccion: ${error}`);
@@ -48,7 +48,7 @@ class ManagerTransaction{
 
     async getAccountTransactions(id){
         try{
-        const transaccions = await transactionModel.findById({accountFromId:id});
+        const transactions = await transactionModel.findById({accountFromId:id});
         return transactions;
     }catch (error){
         throw new Error(`Error al obtener la transaccion: ${error}`);
